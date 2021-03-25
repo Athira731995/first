@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+<script>
+function Student(name,age,rollno){
+    this.Name=name
+    this.Age=age
+    this.rollno=rollno
+    this.show=function(){
+        console.log(`Name ${this.Name}`)
+        console.log(`Age ${this.Age}`)
+        console.log(`Rollno ${this.rollno}`)
+    }
+}
+let student1=new Student("Anna",12,1)
+let student2=new Student("Anu",11,1)
+console.log(student1)
+console.log(student2)
+student1.show()
+student2.show()
+</script>
+
+
+</body>
+
+</html>

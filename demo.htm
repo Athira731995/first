@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let obj = {
+            name: "Anna", age: 30, greetings: function (msg,date) {
+                console.log("hello ", this.name, " welcome",msg,date)
+            }
+        }
+let obj1={name:"Raj"}
+obj.greetings.call(obj1,"Good Morning",new Date())
+obj.greetings.apply(obj1,["Good Morning",new Date()])
+let f=obj.greetings.bind(obj1,"Good Morning")
+console.log("user login")
+console.log(f)
+f(new Date())
+first(100)
+//function currying or partial function application
+function first(x){
+    return function(y){
+        return function(z){
+            return x*y*z
+        }
+    }
+}
+
+
+let f1= first(10)
+let f2=f1(20)
+f2(10)
+function greetings(gender,age,name){
+
+var saluation=gender=="male"?"Mr.":"Ms."
+if(age>25){
+    console.log("hello "+saluation+" "+name)
+}else{
+    console.log("hey   "+saluation+" "+name)
+
+}
+}
+let greetAnadultMale=greetings.bind(null,"male",30)
+greetAnadultMale("Arun")
+greetAnadultMale("Raj")
+
+//Array Destruction
+var names=["Anna","John","Thomas","Kevin"]
+var [a,b,c,d]=names
+console.log(a)
+console.log(b)
+let result1=names.every((item)=>{
+    if(item.startsWith("A")){
+        return true
+    }
+
+})
+console.log(x)
+console.log(result1)
+let result2=names.some((item)=>{
+    if(item.startsWith("A")){
+        return true
+    }
+
+})
+console.log(result2)
+var x=100
+
+
+</script>
+
+
+
+</body>
+
+</html>
